@@ -1,17 +1,9 @@
-import { multiply, signInWithGoogle, signOut } from 'react-native-google-acm';
-import { Text, View, StyleSheet, Button } from 'react-native';
-import { useState, useEffect } from 'react';
+import { signInWithGoogle, signOut } from 'react-native-google-acm';
+import { View, StyleSheet, Button } from 'react-native';
 
 export default function App() {
-  const [result, setResult] = useState<number | undefined>();
-
-  useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
-
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
       <Button
         title="Sign In"
         onPress={() =>
