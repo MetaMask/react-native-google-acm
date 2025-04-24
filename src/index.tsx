@@ -17,10 +17,6 @@ const GoogleAcm = NativeModules.GoogleAcm
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return GoogleAcm.multiply(a, b);
-}
-
 export type GoogleSignInParams = {
   nonce?: string;
   serverClientId: string;
